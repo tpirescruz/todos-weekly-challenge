@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body {
+  background: rgb(32, 32, 32);
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  font-size: 10px;
+  padding-top: 2rem;
+  font-family: "Roboto";
+}
+
+h1 {
+  font-weight: 100;
+  margin: 0;
+  font-size: 4rem;
+  filter: drop-shadow(5px 5px orange);
+}
+hr {
+  background-color: white;
+  height: 1px;
+  margin: 0.3rem 0;
+  width: 8rem;
+  animation: wiggle 2s infinite linear;
+}
+.hr-1 {
+  background-color: white;
+  height: 1px;
+  width: 4rem;
+  animation: wiggle 3s infinite linear;
+}
+.hr-2 {
+  background-color: white;
+  height: 1px;
+  width: 2rem;
+  animation: wiggle 4s infinite linear;
+}
+.btn-input-container {
+  display: flex;
+  align-items: center;
+}
+.btn-sent {
+  font-size: 2rem;
+  border-radius: 30px;
+  border: none;
+  padding: 0 0.5rem;
+  background: transparent;
+  color: white;
+}
+
+.todo-input {
+  margin: 2rem;
+  width: 30rem;
+  height: 2rem;
+  border-radius: 50px;
+  border: none;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.send-btn {
+  width: 3rem;
+}
+
+.info {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  border-bottom: 1px dashed white;
+  font-size: 1rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+.btn-type:hover {
+  transition: .3s;
+  color: rgb(32, 32, 32);  
+  background-color: orange;
+}
+.btn-type {
+  background: transparent;
+  border-radius: 2px;
+  border: none;
+  padding: 0.2rem 1rem;
+  margin: 0 .5rem;
+  color: white;
+  border: solid 1px transparent;
+  cursor: pointer;
+}
+.list-container {
+  width: 50%;
+}
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.todo-text {
+  font-size: 1rem;
+}
+li {
+  width: inherit;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+  font-size: 0.8rem;
+}
+.unchecked {
+  transition: .5s;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid grey;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checked::after{
+  transition: .5s;
+  content: '';
+  height: 1rem;
+  width: 1rem;
+  border-radius: 100px;
+  background-color: orange;
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(15px, 0);
+  }
+
+  75% {
+    transform: translate(-15px, 0);
+  }
+}
