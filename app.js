@@ -12,40 +12,63 @@ let count = 0
 
 btn.addEventListener('click', (e) => {
     e.preventDefault()
-    
+
     const toDo = document.createElement('li')
     const toDoText = document.createElement('p')
     const check = document.createElement('div')
     const deleteToDo = document.createElement('div')
-    const todos = document.querySelectorAll('li')
-    
-    
+    const todos = document.querySelector('li')
+
+
     check.classList.add('unchecked')
     toDoText.classList.add('todo-text')
-    
+
     toDoText.textContent = toDoInput.value;
-    
+
     toDo.appendChild(check)
     toDo.appendChild(toDoText)
     toDo.appendChild(deleteToDo)
     toDoList.appendChild(toDo)
-    
-    
+    count++
+    toDoCount.textContent = `${(count)} todos left`
+
     removeCompleted.addEventListener('click', () => {
         if (check.classList.contains('checked')) {
             check.parentNode.parentNode.removeChild(toDo)
         }
     })
-    
+
     check.addEventListener('click', () => {
         check.classList.toggle('checked')
-        console.log(completedTodos.length)
+        if (check.classList.contains('checked')) {
+            count--
+
+        } else {
+            count++
+        }
+        toDoCount.textContent = `${(count)} todos left`
     })
+    all.addEventListener('click', () => {
+        all.classList.toggle('btn-type-active')
+        toDo.classList.remove('hidden')
+    })
+    completed.addEventListener('click', () => {
+        completed.classList.toggle('btn-type-active')
+        toDo.classList.remove('hidden')
+
+        if (!check.classList.contains('checked')) {
+            toDo.classList.toggle('hidden')
+        }
+    })
+    active.addEventListener('click', () => {
+        active.classList.toggle('btn-type-active')
+        toDo.classList.remove('hidden')
+        if (check.classList.contains('checked')) {
+            toDo.classList.toggle('hidden')
+        }
+    })
+
     const completedTodos = document.querySelectorAll('.checked')
-    
-    
-    console.log(completedTodos.length)
-    toDoCount.textContent = `${(todos.length + 1)} todos left`
 })
 
 

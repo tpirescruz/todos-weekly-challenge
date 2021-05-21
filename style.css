@@ -95,6 +95,16 @@ hr {
   border: solid 1px transparent;
   cursor: pointer;
 }
+.btn-type-active {
+  background: transparent;
+  border-radius: 2px;
+  border: none;
+  padding: 0.2rem 1rem;
+  margin: 0 .5rem;
+  color: white;
+  border: solid 1px orange;
+  cursor: pointer;
+}
 .list-container {
   width: 50%;
 }
@@ -125,6 +135,10 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.hidden {
+  display: none;
 }
 
 .checked::after{
