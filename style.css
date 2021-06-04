@@ -22,26 +22,26 @@ h1 {
   font-weight: 100;
   margin: 0;
   font-size: 4rem;
-  filter: drop-shadow(5px 5px orange);
+  animation: drop-move 1s alternate infinite;
 }
 hr {
   background-color: white;
   height: 1px;
   margin: 0.3rem 0;
   width: 8rem;
-  animation: wiggle 2s infinite linear;
+  animation: wiggle 3s infinite linear;
 }
 .hr-1 {
   background-color: white;
   height: 1px;
   width: 4rem;
-  animation: wiggle 3s infinite linear;
+  animation: wiggle 4s infinite linear;
 }
 .hr-2 {
   background-color: white;
   height: 1px;
   width: 2rem;
-  animation: wiggle 4s infinite linear;
+  animation: wiggle 5s infinite linear;
 }
 .btn-input-container {
   display: flex;
@@ -162,5 +162,16 @@ li {
 
   75% {
     transform: translate(-15px, 0);
+  }
+}
+
+@keyframes drop-move {
+  from {
+    filter: drop-shadow(5px 5px orange);
+
+  }
+  to {
+    filter: drop-shadow(10px 10px red);
+
   }
 }

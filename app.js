@@ -61,7 +61,7 @@ btn.addEventListener('click', (e) => {
         }
     })
     active.addEventListener('click', () => {
-        active.classList.toggle('btn-type-active')
+        // active.classList.toggle('btn-type-active')
         toDo.classList.remove('hidden')
         if (check.classList.contains('checked')) {
             toDo.classList.toggle('hidden')
