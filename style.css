@@ -58,7 +58,6 @@ hr {
 
 .todo-input {
   margin: 2rem;
-  width: 30rem;
   height: 2rem;
   border-radius: 50px;
   border: none;
@@ -72,7 +71,7 @@ hr {
 
 .info {
   display: flex;
-  width: 50%;
+  width: 80%;
   justify-content: space-between;
   border-bottom: 1px dashed white;
   font-size: 1rem;
@@ -106,7 +105,7 @@ hr {
   cursor: pointer;
 }
 .list-container {
-  width: 50%;
+  width: 80%;
 }
 .todo-list {
   display: flex;

@@ -2,7 +2,6 @@ const toDoList = document.querySelector('.todo-list');
 const toDoInput = document.querySelector('.todo-input');
 const toDoCount = document.querySelector('.todo-count');
 const btn = document.querySelector('.btn-sent');
-
 const all = document.querySelector('#all')
 const active = document.querySelector('#active')
 const completed = document.querySelector('#completed')
